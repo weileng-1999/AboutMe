@@ -26,8 +26,13 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.nickname_edit)
         val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
         nicknameTextView.text = editText.text
+
+        //View.GONE is the meaning of something will hide
+        //editText will hide
         editText.visibility = View.GONE
+        //button also will hide
         view.visibility = View.GONE
+
         nicknameTextView.visibility = View.VISIBLE
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
